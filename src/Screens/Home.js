@@ -21,10 +21,10 @@ export default function Home({ navigation }) {
         >
           <Text>Login</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Register")}>
           <Text>Sign Up</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Anonymous")}>
           <Text>Continue Without Acount </Text>
         </TouchableOpacity>
       </ImageBackground>
