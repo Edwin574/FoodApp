@@ -1,6 +1,8 @@
 import React from "react";
 import { ImageBackground, View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import SecondDisplay from "./Display2";
+// import LinearGradient from "react-native-linear-gradient";
+import {LinearGradient} from 'expo-linear-gradient';
+// import SecondDisplay from "./Display2";
 
 const image = require("../../assets/images/fastfood.jpg");
 
@@ -13,8 +15,9 @@ export default function FirstDisplay({ navigation }) {
     }
   return (
     <View style={styles.container}>
+      
       <ImageBackground style={styles.image} source={image} resizeMode="cover">
-        <Text style={styles.text}>WELCOME</Text>
+        <Text style={styles.text}>WELCOME !</Text>
         <View>
           <Text style={styles.text2}>Eddie Fast Foods Delivery</Text>
               </View>
@@ -26,7 +29,8 @@ export default function FirstDisplay({ navigation }) {
                       <Text style={styles.buttontext}>Next</Text>
                   </TouchableOpacity>
               </View>
-          </ImageBackground>
+        </ImageBackground>
+        
     </View>
   );
 }
@@ -38,6 +42,7 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
+    // linearGradient
     // justifyContent:"center",
   },
   text: {
@@ -46,10 +51,11 @@ const styles = StyleSheet.create({
     lineHeight: 100,
     fontWeight: "bold",
     textAlign: "center",
+    marginTop:50
     // backgroundColor: "#000000c0"
   },
   text2: {
-    color: "yellow",
+    color: "#ff8c1a",
     fontSize: 40,
     textAlign: "center",
     },
@@ -73,7 +79,7 @@ const styles = StyleSheet.create({
         bottom: 30,
     },
     buttontext: {
-        color: "yellow",
+        color: "#ff8c1a",
         fontSize:20,
     }
 });

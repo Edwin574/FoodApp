@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-const image = require("../../assets/images/fastfood.jpg");
+const image = require("../../assets/images/display1.jpg");
 
 export default function SecondDisplay({ navigation }) {
   const goToHome = () => {
@@ -40,6 +40,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     position: "relative",
+    display: "flex",
+    
   },
   image: {
     flex: 1,
@@ -54,9 +56,11 @@ const styles = StyleSheet.create({
     // backgroundColor: "#000000c0"
   },
   text2: {
-    color: "yellow",
+    color: "#ff8c1a",
     fontSize: 40,
     textAlign: "center",
+    fontStyle: "italic",
+    fontFamily: "",
   },
   button: {
     width: 100,
@@ -78,7 +82,12 @@ const styles = StyleSheet.create({
     bottom: 30,
   },
   buttontext: {
-    color: "yellow",
+    color: "#ff8c1a",
     fontSize: 20,
+  },
+  action: {
+    backgroundColor: "red",
+    display: "flex",
+   
   },
 });

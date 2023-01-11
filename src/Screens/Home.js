@@ -3,28 +3,31 @@ import {
   View,
   StyleSheet,
   Text,
-  StatusBar,
   Image,
   TouchableOpacity,
+  ImageBackground,
 } from "react-native";
+
+const image = require("../../assets/images/instantdeliveries.jpg");
 
 export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>WELCOME TO HOME SCREEN</Text>
-      <StatusBar style="auto" />
-      <Image
-        style={styles.image}
-        source={{
-          uri: "https://images.pexels.com/photos/3028127/pexels-photo-3028127.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        }}
-      />
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate("Login")}
-      >
-        <Text>Login</Text>
-      </TouchableOpacity>
+      <ImageBackground style={styles.image} source={image} resizeMode="cover">
+        <Text style={styles.text} >YOU ORDER WE DELIVER</Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("Login")}
+        >
+          <Text>Login</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text>Sign Up</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text>Continue Without Acount </Text>
+        </TouchableOpacity>
+      </ImageBackground>
     </View>
   );
 }
@@ -32,17 +35,30 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    // alignContent:"center",
+    // backgroundColor: "#fff",
+    // alignItems: "center",
+    // justifyContent: "center",
   },
   image: {
-    height: 300,
-    width: 300,
+    flex: 1,
   },
+  text: {
+    color: "#ff8c1a",
+    fontSize: 65,
+    lineHeight: 100,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginTop: 50,
+  },
+  // backgroundColor: "#000000c0"
+
   button: {
+    // width: 100,
     alignItems: "center",
-    backgroundColor: "#DDDDDD",
-    padding: 10,
+    backgroundColor: "#ff8c1a",
+    padding: 20,
+    borderRadius: 50,
+    margin: 30,
   },
 });
