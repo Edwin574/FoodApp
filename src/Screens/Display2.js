@@ -32,6 +32,7 @@ export default function SecondDisplay({ navigation }) {
           </TouchableOpacity>
         </View>
       </ImageBackground>
+      
     </View>
   );
 }
